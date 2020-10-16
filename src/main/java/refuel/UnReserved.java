@@ -3,8 +3,7 @@ package refuel;
 import lombok.Data;
 
 @Data
-public class Reserved extends AbstractEvent {
-
+public class UnReserved extends AbstractEvent{
     private Long id;
     private String fuelType;
     private int qty;
@@ -12,5 +11,5 @@ public class Reserved extends AbstractEvent {
     private String stationId;
     private String reservationStatus;
     private Long price;
-
+    private Long refuelId;
 }

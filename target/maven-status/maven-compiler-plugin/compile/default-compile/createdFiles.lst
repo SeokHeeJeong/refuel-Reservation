@@ -2,6 +2,7 @@ refuel\ReservationRepository.class
 refuel\ReservationController.class
 refuel\Refuelled.class
 refuel\ReservationCanceled.class
+refuel\UnReserved.class
 refuel\Reservation.class
 refuel\PolicyHandler.class
 refuel\ReservationApplication.class
