@@ -39,8 +39,8 @@ spec:
             failureThreshold: 10
           livenessProbe:
             httpGet:
-              path: '/reservationsWrongURL'
-              port: 80809
+              path: '/reservations'
+              port: 8080
             initialDelaySeconds: 120
             timeoutSeconds: 2
             periodSeconds: 5
