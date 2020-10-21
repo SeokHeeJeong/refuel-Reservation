@@ -28,7 +28,7 @@ spec:
               cpu: "200m" # 1/5 core
             limits:
               #memory: "40Mi"
-              cpu: "4000m"
+              cpu: "2000m"
           livenessProbe:
             httpGet:
               path: '/reservations'
