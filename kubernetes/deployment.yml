@@ -13,8 +13,8 @@ spec:
     metadata:
       labels:
         app: reservation
-      #annotations:
-       # sidecar.istio.io/inject: "true"
+      annotations:
+        sidecar.istio.io/inject: "true"
     spec:
       containers:
         - name: reservation
@@ -25,10 +25,18 @@ spec:
           resources:
             requests:
               #memory: "20Mi"
-              cpu: "200m" # 1/5 core
+              cpu: "100m" # 1/5 core
             limits:
               #memory: "40Mi"
-              cpu: "2000m"
+              cpu: "1000m"
+          readinessProbe:
+            httpGet:
+              path: '/reservations'
+              port: 8080
+            initialDelaySeconds: 10
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 10    
           livenessProbe:
             httpGet:
               path: '/reservations'
